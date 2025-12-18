@@ -2,10 +2,14 @@ let nums = [1, 2, 3, 4]
 
 function sumArr(arr) {
     let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i]
+    try {
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        return sum;
+    } catch (error) {
+        console.log(error)
     }
-    return sum;
 }
 
 function findLargest(arr) {
