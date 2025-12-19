@@ -24,4 +24,4 @@ function getMusic({ music: { traditional, jazz }}) {
     console.log(`Here is jazz: ${jazz}`)
 }
 
-getMusic(recommendations);
+getMusic(recom);
