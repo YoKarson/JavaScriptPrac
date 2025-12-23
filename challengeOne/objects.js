@@ -19,9 +19,21 @@ const recommendations = {
     }
 }
 
+
 function getMusic({ music: { traditional, jazz }}) {
     console.log(`Here is the traditional: ${traditional}`)
     console.log(`Here is jazz: ${jazz}`)
 }
 
-getMusic(recom);
+async function getCards() {
+    try{
+        const response = await fetch(
+            "https://deckofcardsapi.com/api/deck/new/draw/?count=5"
+        );
+        apiData = await response.json();
+    } catch(error) {
+        console.log(error)
+    }
+}
+let apiData = getCards();
+console.log(apiData);
